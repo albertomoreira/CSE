@@ -1,23 +1,21 @@
 class Room(object):
-    def __init__(self, name, north, south, east, west, up, down, description):
+    def __init__(self, name, north, south, east, west, climb_up, climb_down, description):
         self.name = name
         self.north = north
         self.south = south
         self.east = east
         self.west = west
         self.description = description
-        self.up = up
-        self.down = down
+        self.climb_up = climb_up
+        self.climb_down = climb_down
 
     def move(self, direction):
         global current_node
         current_node = globals()[getattr(self, direction)]
 
 
-park = Room("Parking Lot", None, None, None, None, None, None, 'locked cars')
-hospital = Room("waiting room", None, "Parking lot", "restroom", None, None, "elevator")
-elevator1 = Room()
-elevator2 = Room()
-elevator3 = Room("Elevator", None, None, None,  None, None, 'elevator4','elevator2',"You are on the third floor")
-elevator4 = Room("Elevator", None, None, None, None, 'elevator5', 'elevator3', "You are on the fourth floor.")
-elevator5 = Room("Elevator", None, None, None, None, None, 'elevator4', "You are on the fifth floor.")
+north_military_base = Room("Military Base", "Four locked doors", "two_giant_rocks", None, None, "playground", None,
+                           "You have been teleported to a island you are being chased by the unknown your only way "
+                           "to leave is to make it to the other end Good Luck")
+playground = Room("Playground", "Trees leaning on an abandoned fort", "ladder going down into a hole", None, )
+two_giant_rocks = Room("two_giant_rocks",)
