@@ -16,14 +16,14 @@
 
 
 class Character(object):
-    def __init__(self, name, description, health):
+    def __init__(self, name, description, health, attack, weakness):
         self.name = name
         self.description = description
         self.inventory = []
         self.health = health
-        self.attack.attack
-        self.interact.interact
+        self.attack = attack
+        self.interact = True
+        self.weakness = weakness
 
 
-
-you = Character("Savage", "Tall very athletic brave guy", 100)
+you = Character("Savage", "Tall very athletic brave guy", 100, 100, 'rust')

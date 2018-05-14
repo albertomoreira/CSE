@@ -19,9 +19,10 @@ north_military_base = Room("North Military Base", "Four_locked_doors", None, "ea
                            "being chased by the unknown your only way to leave is to make it to the other end."
                            " Good Luck.")
 
-south_military_base = Room("South Military Base",)
-west_military_base = Room("West Military Base", "North Military Base", )
-east_military_base = Room("East Military Base")
+south_military_base = Room("South Military Base", "North Military Base", "South Military Base", "East Military Base",
+                           "West Military Base", None,)
+west_military_base = Room("West Military Base", "North Military Base", "South Military Base", "East Military Base")
+east_military_base = Room("East Military Base",)
 first_door = Room("First Door", "")
 second_door = Room()
 third_door = Room()
