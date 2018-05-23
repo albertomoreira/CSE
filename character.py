@@ -25,5 +25,13 @@ class Character(object):
         self.interact = True
         self.weakness = weakness
 
+        def Dammaged(self):
+            print("You hurt your enemy")
+
+        def kill(self):
+            print("You killed the enemy or have been killed by the enemy")
+
 
 you = Character("Savage", "Tall very athletic brave guy", 100, 100, 'rust')
+
+
